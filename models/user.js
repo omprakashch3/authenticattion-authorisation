@@ -23,7 +23,7 @@ const User = mongoose.model(
       required: true,
       minlength: 5,
       maxlength: 1024,
-      
+    },
   })
 );
 
@@ -37,6 +37,5 @@ function validateUser(user) {
   return Joi.validate(user, schema);
 }
 
-
 exports.User = User;
-exports.validate =validateUser;
+exports.validate = validateUser;
